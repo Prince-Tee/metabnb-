@@ -16,7 +16,14 @@ import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
 import image4 from '../assets/image4.png';
-import Meta_header from '../assets/Meta_header.png'
+import Meta_header from '../assets/Meta_header.png';
+import facebook from '../assets/facebook.png';
+import instagram from '../assets/instagram.png';
+import twitter from '../assets/twitter.png';
+import Mbtoken from  '../assets/Mbtoken.png';
+import opensea from '../assets/opensea.png';
+import Metatoken from  '../assets/Metatoken.png';
+
 
 const Home = () => {
   
@@ -43,7 +50,8 @@ const Home = () => {
               </li>
             </ul>
 
-          <button  className="connect">Connect wallet</button>
+          <a className="connect" href="/Popup">Connect wallet</a>
+
           </nav>
         </div>
         <header>
@@ -88,28 +96,20 @@ const Home = () => {
          
           
           </header>
-        <div className="wallets"></div>
-   
-   
-   
-   
-   
-   
+        
+        <div className="wallets">
+            <img src={Mbtoken} alt="token-logo" />
+            <img src={Metatoken} alt="token-logo" />
+            <img src={opensea} alt="token-logo" />
+        
 
-
+        </div>
    
    
-  {/*<div>
-  <button onclick="myFunction()">Upload</button>
-      <script>
-      function myFunction() {
-          alert("Your file is being uploaded!")
-      }
-      </script>
-</div>*/}
-
-
    
+       
+   
+    
   
     
   
@@ -336,15 +336,57 @@ const Home = () => {
    
    
    
-    <footer>
-  
-  
-  <img className="met" src={Meta_footer} alt="met1"/>
-  
-  
+   <footer>
+          <ul className="lists">
+            <li>
+              <ul>
+                <li>
+                  <img
+                    className="footer_logo"
+                    src={Meta_footer}
+                    alt="meta-footer"
+                  />
+                </li>
+                <li>
+                    <img className="social" src={facebook} alt="facebook-logo" />
+                    <img className="social" src={instagram} alt="instagram-logo" />
+                    <img className="social"  src={twitter} alt="twitter-logo" />
+                </li>
+                <li className="underlists">&copy; 2022 Metabnb</li>
+              </ul>
+            </li>
 
+            <li>
+              <h2>Community</h2>
+              <ul className="underlists">
+                <li>NFT</li>
+                <li>Tokens</li>
+                <li>Landlords</li>
+                <li>Discord</li>
+              </ul>
+            </li>
 
-    </footer>
+            <li>
+              <h2>Places</h2>
+              <ul className="underlists">
+                <li>Castle</li>
+                <li>Farm</li>
+                <li>Beach</li>
+                <li>Learn more</li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>About us</h2>
+              <ul className="underlists">
+                <li>Roadmaps</li>
+                <li>Creators</li>
+                <li>Career</li>
+                <li>Contact us</li>
+              </ul>
+            </li>
+          </ul>
+        </footer>
     </div> 
     </div>
   )

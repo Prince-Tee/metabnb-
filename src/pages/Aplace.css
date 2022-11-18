@@ -5,6 +5,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 800px) {
+    * {
+      flex-direction: column;
+      overflow:inherit;
+      
+    }
+  }
+  @media (max-width: 200px) {
+    * {
+      flex-direction: column;
+     
+    }
+  }
 
 .body {
   display: flex;
@@ -13,10 +26,22 @@
   margin: auto;
   font-family: "Red Rose", cursive;
 }
+@media (max-width: 800px) {
+    .body {
+      flex-direction: column;
+      overflow: ;
+    }
+  }
 
 .container {
   width: 1400px;
 }
+
+@media (max-width: 800px) {
+    .container {
+     width: 500px;
+    }
+  }
 
 .logo {
   float: left;
@@ -258,4 +283,74 @@ li {
     float: left;
 }
 
+.to-visit {
+    padding: 20px 140px;
+}
+
+.places {
+    margin-top: 10px;
+}
+
+.places-list {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.places-list li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+
+.location {
+    background-color: white;
+    border: 1px solid rgb(199, 194, 194);
+    padding: 10px;
+    border-radius: 10px;
+    width: 120px;
+    font-family: "Red Rose", cursive;
+    text-align: left;
+}
+
+.location-logo {
+    width: 15px;
+    float: right;
+}
+
+@media only screen and (max-width:768px) {
+    .container {
+     max-width: 768px;
+    }
+
+    .to-visit {
+        padding: 20px;
+    }
+
+    .vis {
+        display: none;
+    }
+
+    .places-list {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .container {
+     max-width: 480px;
+    }
+
+    .to-visit {
+        padding: 20px;
+    }
+
+    .vis {
+        display: none;
+    }
+
+    .places-list {
+        display: block;
+    }
+}
     

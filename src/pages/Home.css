@@ -5,17 +5,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 800px) {
+    * {
+      flex-direction: column;
+      
+    }
+  }
 
 .body {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   font-family: "Red Rose", cursive;
 }
+@media (max-width: 200px) {
+    .body {
+      flex-direction: grid;
+      overflow: hidden;
+    }
+  }
 
 .container {
-  width: 1400px;
+  width: 1395px;
 }
 
 .logo {
@@ -23,14 +36,20 @@
 }
 
 .meta_logo {
-  width: 150px;
+  width: 180px;
 }
 
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 10px 5%;
 }
+@media (max-width: 800px) {
+    nav {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
 
 nav ul {
   flex: none;
@@ -45,9 +64,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
-  font-weight: 400;
-  transition: 0.3s ease-in-out;
+  color: #053519;
 }
 
 .connect {
@@ -59,10 +76,11 @@ nav ul li a {
   border: none;
   border-radius: 10px;
   font-family: "Red Rose", cursive;
+  cursor: pointer;
 }
 
 main {
-  padding: 40px 140px;
+  padding: 40px 150px;
 }
 
 header,
@@ -168,9 +186,15 @@ main h1 {
   margin-left: 5px;
 }
 
+.wallets img {
+  width: 150px;
+}
+
 .wallets {
-  height: 50px;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
+  padding: 10px;
   background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
   margin-top: 30px;
 }
@@ -189,6 +213,12 @@ main h1 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media (max-width: 800px) {
+    .places {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
 
 .places-img {
   margin: 10px;
@@ -199,6 +229,12 @@ main h1 {
   text-align: center;
   font-size: 12px;
 }
+@media (max-width: 800px) {
+    .places-img {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
 
 section {
   display: flex;
@@ -207,7 +243,12 @@ section {
   padding: 50px 0;
   background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
 }
-
+@media (max-width: 800px) {
+    section {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
 .meta-nft {
   max-width: 400px;
   align-self: center;
@@ -244,7 +285,262 @@ section {
 
 footer {
   background-color: black;
-  padding: 5px;
+  padding: 50px;
+  color: white;
 }
 
-    
+.footer_logo {
+  margin-bottom: 50px;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+.social {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.lists h2 {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.underlists {
+  line-height: 2;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+/* .fa-bars {
+  font-size: 30px;
+} */
+
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .logo {
+    float: none;
+  }
+
+  nav {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul {
+    flex: none;
+    text-align: left;
+    /* margin: 20px; */
+  }
+
+  .connect {
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    width: 110px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .rent-meta {
+    max-width: 300px;
+    align-self: center;
+  }
+
+  header,
+  .logo,
+  nav {
+    padding: 40px;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-images img {
+    width: 150px;
+  }
+
+  .header-images {
+    display: flex;
+    max-width: 400px;
+  }
+
+  .image1 {
+    margin-top: 50px;
+  }
+
+  .btn {
+    width: 60px;
+    font-size: 10px;
+    height: 40px;
+  }
+
+  .srch {
+    font-size: 10px;
+    width: 130px;
+    height: 40px;
+  }
+
+  section {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .nft-img {
+   max-width: 300px;
+  }
+
+  .wallets {
+    justify-content: space-between;
+  }
+
+  .wallets img {
+    width: 100px;
+  }
+
+  .places {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lists h2 {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+
+  .logo {
+    float: left;
+  }
+  nav {
+    display: block;
+    align-items: center;
+    padding: 10px 5%;
+  }
+
+  nav ul li {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .connect {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex: none;
+    text-align: left;
+    margin-top: 60px;
+  }
+
+  main {
+    padding: 20px;
+
+  }
+
+  header,
+  .logo,
+  nav {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .header-content {
+    display: block;
+  }
+
+  .header-images img {
+    width: 150px;
+  }
+
+  .header-images {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .image1 {
+    margin-top: 50px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 40px;
+  }
+
+  .srch {
+    width: 200px;
+    height: 40px;
+  }
+
+  section {
+    display: block;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .nft-img {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  .wallets {
+    justify-content: space-between;
+  }
+
+  .wallets img {
+    width: 100px;
+  }
+
+  .places {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .lists {
+    display: block;
+  }
+
+  .lists h2 {
+    margin-top: 20px;
+  }
+}
+
